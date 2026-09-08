@@ -1,0 +1,11 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace EventsHub.Api.Controllers
+{
+    [Route("api/v1/[controller]")]
+    [ApiController]
+    public class EventsHubBaseContoller : ControllerBase
+    {
+    }
+}
