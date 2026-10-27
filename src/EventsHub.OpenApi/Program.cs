@@ -26,19 +26,7 @@ services.AddMvc()
     });
 
 var app = builder.Build();
-
-// Configura el middleware de NSwag especificando la ruta del documento
-app.UseOpenApi(settings =>
-{
-    settings.Path = "/swagger/{documentName}/swagger.json";
-});
-
-app.UseSwaggerUi(settings =>
-{
-    settings.DocumentTitle = "EventsHubV1";
-    settings.Path = "/swagger";
-    settings.DocumentPath = "/swagger/EventsHub/swagger.json";
-});
-
+app.UseOpenApi();
+app.UseSwaggerUi();
 app.MapControllers();
 app.Run();
